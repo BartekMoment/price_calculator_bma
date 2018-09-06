@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "name": "Banner",
+    "price": 150
+  },
+  {
+    "id": 1,
+    "name": "Plakat",
+    "price": 250
+  },
+  {
+    "id": 2,
+    "name": "Ulotka",
+    "price": 50
+  },
+  {
+    "id": 3,
+    "name": "Landing Page",
+    "price": 1750
+  },
+  {
+    "id": 4,
+    "name": "Strona WWW",
+    "price": 2245
+  }
+]
