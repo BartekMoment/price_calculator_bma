@@ -12,7 +12,8 @@
         <button>Dodaj +</button>
       </form>
     <p>{{ todos }}</p>
-    <JsonExcel :fields="fields" :data="todos"/>
+    <button><JsonExcel :fields="fields" :data="todos"/></button>
+    
     </div>
 </template>
 
@@ -34,13 +35,7 @@ export default {
       value: { name: "Nazwa produktu", price: "Cena" },
       options: myjson,
       count: 1,
-      todos: [
-        {
-          'title': 'test',
-          'price': '25',
-          'count': '3'
-        }
-      ]
+      todos: []
     };
   },
   methods: {
