@@ -11,20 +11,22 @@
       <form v-on:submit.prevent="addNewTodo">
         <button>Dodaj +</button>
       </form>
-    <p>{{ todos }}</p>
+      <Table :table-name="todos"/>
     <button><JsonExcel :fields="fields" :data="todos"/></button>
-    
     </div>
 </template>
 
 <script>
 import myjson from "../../static/date.json";
 import JsonExcel from 'vue-json-excel'
-
+import Table from './Table'
 
 export default {
   name: "HelloWorld",
-	components:{JsonExcel},
+	components:{
+    JsonExcel,
+    Table
+  },
   data() {
     return {
       fields: {
@@ -39,6 +41,9 @@ export default {
     };
   },
   methods: {
+        filterItems: function(e){
+          console.log(JSON.stringify(this.todos))
+        },
     nameWithLang({ name, price }) {
       return `${name} — [${price}]`;
     },
