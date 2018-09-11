@@ -41,9 +41,6 @@ export default {
     };
   },
   methods: {
-        filterItems: function(e){
-          console.log(JSON.stringify(this.todos))
-        },
     nameWithLang({ name, price }) {
       return `${name} — [${price}]`;
     },
@@ -53,6 +50,9 @@ export default {
         price: this.value.price * this.count,
         count: this.count
       });
+    },
+    deleteEvent: function(index) {
+      this.events.splice(index, 1);
     }
   },
   computed: {
